@@ -1,0 +1,25 @@
+/* Couldn't figure out how to have 10px of spaces to the right of the boxes lol */
+
+#top {
+    width:100%;
+    background: red;
+}
+
+.stylish div {
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    height: 45px;
+    margin-bottom: 5px;
+    background: grey;
+    float:left; 
+    display:inline;
+}
+
+.stylish div:nth-child(2n+1) {
+    width: 66%;
+}
+
+.stylish div:nth-child(2n) {
+    width: 33%;
+}
