@@ -1,0 +1,46 @@
+<style>
+    h1 {
+      text-align: center;
+    }
+
+    table {
+      margin: auto;
+    }
+    
+    td {
+      padding: 10px;
+    }
+</style>
+
+<h1>Taylor Swift: Evermore
+<br/>
+<%= link_to "Go Back", songs_path %>
+</h1>
+<% i = 0 %>
+<table style="border:1px solid black;">
+  <tr>
+    <th>Likes</th>
+    <th>Loves</th>
+    <th>Title</th>
+  </tr>
+  <% @songs.each do |song| %>
+    <tr>
+      <td><div id="like<%= i %>">0</div></td>
+      <td><div id="love<%= i %>">0</div></td>
+      <td><%= render song %></td>
+      <td><button id="i" onclick="like(<%= i %>)">Like</button></td>
+      <td><button id="i" onclick="love(<%= i %>)">Love</button></td>
+    </tr>
+    <% i = i + 1 %>
+  <% end %>
+</table>
+
+<script>
+  function like(i) {
+    document.getElementById("like" + i).innerHTML++;
+  }
+
+  function love(i) {
+    document.getElementById("love" + i).innerHTML++;
+  }
+</script>
