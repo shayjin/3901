@@ -37,5 +37,3 @@
 
 # Program Controls
 - To run this program, run the program with "firefox index.html" in the terminal
-
-git 
